@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Re-applies the Alt Gr -> Option mapping for the ASUS KD201.
+
+  hidutil mappings live on the connected device instance, so they are lost when
+  the keyboard is unplugged, when its wireless link drops, and at every reboot.
+  RunAtLoad covers login; the interval re-applies after a reconnect. Setting the
+  same mapping twice is a no-op, so the repeat costs nothing.
+
+  __SCRIPT__ is replaced with the real path by install.sh.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.local.asus-kd201-altgr</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>__SCRIPT__</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StartInterval</key>
+    <integer>60</integer>
+    <key>StandardOutPath</key>
+    <string>/dev/null</string>
+    <key>StandardErrorPath</key>
+    <string>/dev/null</string>
+</dict>
+</plist>

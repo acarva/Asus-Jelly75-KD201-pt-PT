@@ -1,0 +1,5 @@
+# compiled output of verify.swift
+verify
+verify.dSYM/
+
+.DS_Store
