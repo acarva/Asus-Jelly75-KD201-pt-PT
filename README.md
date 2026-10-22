@@ -160,3 +160,7 @@ Three things cost real time when building this, all worth knowing:
   the input-source list until the next logout, so `verify.swift` matches the
   layout name exactly rather than by substring — otherwise it can test a ghost
   and report failures that no longer exist.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
